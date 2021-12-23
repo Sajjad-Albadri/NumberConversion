@@ -8,7 +8,7 @@ int convert(int base,int number); // prototype of convert
 int main(void) {
 
   	int base = 0;
-    int number = 0;
+    	int number = 0;
 
 	//the big loop that will ask the user for input until exit command (-1)
 	while (base != -1){
@@ -30,20 +30,20 @@ int main(void) {
 	                	int decimal = 0;
 	                	int weight = 1;
 	                	int rem;
-						int num = number;
+				int num = number;
 
-						//this while loops traverses through the number entered by User and stops when that number is down to zero,
-						//it also does a very crucial part which is: if the remainder is greater than the base as it traverses through the number,
-						//it breaks out of the loop and sends an error message. Otherwise, the code keeps going until the number is down to zero,
-						//then it runs the else statement which prints out the decimal as the answer.
+				//this while loops traverses through the number entered by User and stops when that number is down to zero,
+				//it also does a very crucial part which is: if the remainder is greater than the base as it traverses through the number,
+				//it breaks out of the loop and sends an error message. Otherwise, the code keeps going until the number is down to zero,
+				//then it runs the else statement which prints out the decimal as the answer.
 	                	while(number != 0){
 	                        	rem = number % 10;
-								if (rem >= base){break;}
-								else {
-	                        	decimal = decimal + rem*weight;
-	                        	number = number / 10;
-                     			weight = weight*2;
-								}
+						if (rem >= base){break;}
+						else {
+	                        			decimal = decimal + rem*weight;
+	                        			number = number / 10;
+                     					weight = weight*2;
+						}
          				}
 						if (rem >= base){
 							printf("Error: a single digit is larger than the base.\n");
@@ -58,18 +58,18 @@ int main(void) {
 		break; //break from the case statement
 		case 4: //if the user enters 4, run this pieace
 			printf("Enter number to convert to Base 10: ");
-            scanf("%d", &number);
+            		scanf("%d", &number);
 			// the convert function here analyzes what the user entered as number above and runs this piece of code
-            int convert4(int base,int number) {
+            		int convert4(int base,int number) {
                                 int decimal = 0;
                                 int weight = 1;
                                 int rem;
                                 int num = number;
 
-								//this while loops traverses through the number entered by User and stops when that number is down to zero,
-								//it also does a very crucial part which is: if the remainder is greater than the base as it traverses through the number,
-								//it breaks out of the loop and sends an error message. Otherwise, the code keeps going until the number is down to zero,
-								//then it runs the else statement which prints out the decimal as the answer.
+				//this while loops traverses through the number entered by User and stops when that number is down to zero,
+				//it also does a very crucial part which is: if the remainder is greater than the base as it traverses through the number,
+				//it breaks out of the loop and sends an error message. Otherwise, the code keeps going until the number is down to zero,
+				//then it runs the else statement which prints out the decimal as the answer.
                                 while(number != 0){
                                         rem = number % 10;
                                         if (rem >= base){break;}
@@ -81,46 +81,46 @@ int main(void) {
                                 }
                                 if (rem >= base){
                                         printf("Error: a single digit is larger than the base.\n");
-										printf("The base 10 equivalent is: 0");
+					printf("The base 10 equivalent is: 0");
                                 }
                                 else {
                                         printf("The base 10 equivalent of %d is: %d", num, decimal);
                                 }
-            }
+            		}
 			convert4(base,number); //we ran the above function
 			printf("\n"); //print a new line
 		break; //break from the case statement
-        case 8: //if the user enters 8, run this pieace
-                printf("Enter number to convert to Base 10: ");
-                scanf("%d", &number);
+       		case 8: //if the user enters 8, run this pieace
+                	printf("Enter number to convert to Base 10: ");
+                	scanf("%d", &number);
 				//the convert function here analyzes what the user entered as number above and runs this piece of code
-                        int convert8(int base,int number) {
-                                int decimal = 0;
-                                int weight = 1;
-                                int rem;
-                                int num = number;
+                       		int convert8(int base,int number) {
+                               		int decimal = 0;
+                                	int weight = 1;
+                                	int rem;
+                                	int num = number;
 
-								//this while loops traverses through the number entered by User and stops when that number is down to zero,
-								//it also does a very crucial part which is: if the remainder is greater than the base as it traverses through the number,
-								//it breaks out of the loop and sends an error message. Otherwise, the code keeps going until the number is down to zero,
-								//then it runs the else statement which prints out the decimal as the answer.
-                                while(number != 0){
-										rem = number % 10;
-										if (rem >= base){break;}
-										else {
-										decimal = decimal + rem*weight;
-										number = number / 10;
-										weight = weight*8;
-										}
-								}
-								if (rem >= base){
-										printf("Error: a single digit is larger than the base.\n");
-										printf("The base 10 equivalent is: 0");
-										}
-								else {
-										printf("The base 10 equivalent of %d is: %d", num, decimal);
-								}
-                        }
+					//this while loops traverses through the number entered by User and stops when that number is down to zero,
+					//it also does a very crucial part which is: if the remainder is greater than the base as it traverses through the number,
+					//it breaks out of the loop and sends an error message. Otherwise, the code keeps going until the number is down to zero,
+					//then it runs the else statement which prints out the decimal as the answer.
+                                	while(number != 0){
+						rem = number % 10;
+						if (rem >= base){break;}
+						else {
+							decimal = decimal + rem*weight;
+							number = number / 10;
+							weight = weight*8;
+						}
+					}
+					if (rem >= base){
+						printf("Error: a single digit is larger than the base.\n");
+						printf("The base 10 equivalent is: 0");
+					}
+					else {
+						printf("The base 10 equivalent of %d is: %d", num, decimal);
+					}
+                        	}
 				convert8(base, number); //we ran the above function
 				printf("\n"); //print a new line
 		break; //break from the case statement
